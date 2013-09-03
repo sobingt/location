@@ -1,0 +1,31 @@
+{
+    "id": 1,
+    "jsonrpc": "2.0",
+    "total": 4,
+    "result": [
+        {
+            "id": 0,
+            "place": "borivali",
+            "latitude": 19.22145,
+            "longitude": 72.85242
+        },
+        {
+            "id": 1,
+            "place": "iccolony",
+            "latitude": 19.248071,
+            "longitude": 72.846326
+        },
+        {
+            "id": 2,
+            "place": "mcdonalds",
+            "latitude": 19.22143,
+            "longitude": 72.852334
+        },
+        {
+            "id": 3,
+            "place": "raghuleela",
+            "latitude": 19.213892,
+            "longitude": 72.848987
+        }
+    ]
+}
