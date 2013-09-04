@@ -7,6 +7,8 @@
   },
   "dependencies": {
     "express": "3.3.8",
-    "hbs": "*"
+    "hbs": "*",
+	"mysql": "*",
+	"googlemaps": "*"
   }
 }
