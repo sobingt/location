@@ -10,7 +10,7 @@ var connect = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
-    database: "example"
+    database: "location"
 
 });
 var app = express();
@@ -37,8 +37,20 @@ if ('development' == app.get('env')) {
 }
 
 //google maps code
-app.get('/location', function (req, res) {
+app.get('/location/new', function (req, res) {
+res.render('new');
+});
 
+app.post('/location/add', function (req, res) {
+connect.query("INSERT INTO `location`.`location` (`place`, `description`, `latitude`, `longitude`) VALUES ('"+ req.body.place +"', '"+ req.body.description+"', '"+req.body.latitude+"', '"+req.body.longitude+"');", function (error, rows, fields) {
+		res.writeHead(200, {
+            'Content-Type': 'text/plain'
+		});    
+		res.end('ok');
+	});
+});
+
+app.get('/location', function (req, res) {
 res.render('location', {latlng: parsedJSON.result});
 });
 
